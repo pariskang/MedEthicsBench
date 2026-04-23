@@ -1,0 +1,11 @@
+{
+  "name": "MedEthicsPsychBench",
+  "version": "0.1.0",
+  "created_at": "2026-04-18T12:43:41.217687",
+  "n_items": 0,
+  "topic_ids": [],
+  "question_types": [],
+  "generator_model": "Claude-Sonnet-4.6",
+  "retrieval_model": "GPT-5.4",
+  "notes": null
+}

@@ -1,0 +1,36 @@
+MedEthicsPsychBench v3 frontier-hard hardening summary
+
+Modified files:
+- med_ethics_bench/config.py
+- med_ethics_bench/prompts.py
+- med_ethics_bench/question_generator.py
+- med_ethics_bench/evaluator.py
+- main.py
+- README.md
+
+Key changes:
+1) Larger retrieval pool
+   - global_theory_per_topic: 5
+   - country_theory_per_topic: 3
+   - cases_per_country_topic: 4
+
+2) Stricter generator contract
+   - min key_points: 5
+   - min required key_points: 3
+   - min common_pitfalls: 4
+   - enforced categories: principle/stakeholder/citation/counterargument
+   - country/comparison also require cultural_context
+   - country anchor validation for single-country/comparison items
+
+3) Frontier-hard judge rubric
+   - added jurisdictional_precision
+   - added counterargument_handling
+   - higher citation weight
+
+4) Hard caps after judging
+   - cap on low required-keypoint hit rate
+   - cap on low citation/cultural/jurisdiction scores for country items
+   - cap on weak counterargument handling for argument-style items
+
+5) CLI updated
+   - estimate/build/answer/grade all use current config field names
