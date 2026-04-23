@@ -1,8 +1,8 @@
-# MedEthicsBench / 医学伦理基准（中英双语）
+# MedEthicsBench / 医学伦理基准
 
 > A frontier-hard, research-grade benchmark toolkit for **medical ethics reasoning**, designed for paper-level evaluation and reproducible experiments.
 >
-> 面向**论文级实验复现**的医学伦理推理 benchmark 工具链，支持题库构建、模型作答与自动评分。
+> 面向医学伦理推理 benchmark 工具链，支持题库构建、模型作答与自动评分。
 
 ---
 
@@ -22,7 +22,7 @@
 
 ## 2) Benchmark Snapshot / 基准概览
 
-### 2.1 Track × Topic distribution / 赛道与主题分布（Text版）
+### 2.1 Track × Topic distribution / 赛道与主题分布
 
 | Topic | Comparison | Single-country | Universal |
 |---|---:|---:|---:|
@@ -37,7 +37,7 @@
 | Digital mental health AI | 5 | 18 | 0 |
 | Mental health | 5 | 18 | 0 |
 
-### 2.2 Evidence composition / 证据来源构成（Text版）
+### 2.2 Evidence composition / 证据来源构成
 
 | Bucket | Case | Guideline | Theory | Total |
 |---|---:|---:|---:|---:|
@@ -45,7 +45,7 @@
 | Benchmark-linked unique sources | 180 | 159 | 21 | 360 |
 | Weighted question references | 840 | 738 | 567 | 2145 |
 
-### 2.3 Annotation profile / 标注结构画像（Text版）
+### 2.3 Annotation profile / 标注结构
 
 | Task type | Key points | Expected principles | Expected stakeholders | Common pitfalls |
 |---|---:|---:|---:|---:|
@@ -58,7 +58,7 @@
 | CoT evaluation | 6.6 | 4.7 | 5.7 | 5.0 |
 | Open argument | 6.6 | 4.7 | 6.1 | 4.9 |
 
-### 2.4 Baseline performance tables / 基线性能表（Text版）
+### 2.4 Baseline performance tables / 基线性能表
 
 **Table IV. Overall and track-level performance**
 
@@ -182,10 +182,4 @@ python main.py grade --model GPT-5.4
 - Pin model names and runtime flags in experiment logs.
 - For publications, store both raw model responses and normalized scoring outputs.
 
----
 
-## 8) Acknowledgement / 说明
-
-This README is rewritten into bilingual research format and provided in a binary-free version for platforms that do not support binary attachments.
-
-本 README 已重写为中英双语研究风格，并提供纯文本（无二进制图片）版本，适配不支持二进制附件的平台。
