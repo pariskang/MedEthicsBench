@@ -1,8 +1,8 @@
-# MedEthicsBench / 医学伦理基准 
+# MedEthicsBench / 医学伦理基准
 
-> A frontier-hard, dynamic research-grade benchmark toolkit for **medical ethics reasoning**, designed for paper-level evaluation and reproducible experiments.
+> A frontier-hard, research-grade benchmark toolkit for **medical ethics reasoning**, designed for paper-level evaluation and reproducible experiments.
 >
-> 面向医学伦理推理的动态 benchmark 工具链，支持题库构建、模型作答与自动评分。
+> 面向医学伦理推理 benchmark 工具链，支持题库构建、模型作答与自动评分。
 
 ---
 
@@ -24,20 +24,19 @@
 
 ### 2.1 Track × Topic distribution / 赛道与主题分布
 
-[View Figure 3 PDF / 查看图3 PDF](fig/Fig3_topic_by_track_heatmap.pdf)
+![Track × Topic distribution](fig/Fig3_topic_by_track_heatmap.png)
 
 ### 2.2 Evidence composition / 证据来源构成
 
-[View Figure 10 PDF / 查看图10 PDF](fig/Fig10_source_corpus_overview.pdf)
+![Evidence composition](fig/Fig10_source_corpus_overview.png)
 
 ### 2.3 Annotation profile / 标注结构
 
-[View Figure 4 PDF / 查看图4 PDF](fig/Fig4_annotation_density_by_format.pdf)
-
+![Annotation profile](fig/Fig4_annotation_density_by_format.png)
 
 ### 2.4 Prompt token distribution / 提示词长度分布
 
-[View Figure 5 PDF / 查看图5 PDF](fig/Fig5_prompt_token_distribution.pdf)
+![Prompt token distribution](fig/Fig5_prompt_token_distribution.png)
 
 ### 2.5 Baseline performance tables / 基线性能表
 
@@ -59,8 +58,6 @@
 
 ---
 
----
-
 ## Citation / 引用信息
 
 If you use **MedEthicsBench**, please cite:
@@ -73,6 +70,19 @@ If you use **MedEthicsBench**, please cite:
 }
 ```
 
+**Authors**
+- Yanlan Kang
+- Lee shou-yu
+- Liying Chu
+- Sunsi Wu
+- Wenqing Qu
+- Weichen Liu
+- Longlong Cao*
+- Chengbin Hou*
+- William Cheng-Chung Chu*
+
+---
+
 ## 3) Repository Structure / 仓库结构
 
 ```text
@@ -80,10 +90,10 @@ If you use **MedEthicsBench**, please cite:
 ├── main.py                          # CLI entry / 命令行入口
 ├── requirements.txt
 ├── fig/
-│   ├── Fig3_topic_by_track_heatmap.pdf
-│   ├── Fig4_annotation_density_by_format.pdf
-│   ├── Fig5_prompt_token_distribution.pdf
-│   └── Fig10_source_corpus_overview.pdf
+│   ├── Fig3_topic_by_track_heatmap.png
+│   ├── Fig4_annotation_density_by_format.png
+│   ├── Fig5_prompt_token_distribution.png
+│   └── Fig10_source_corpus_overview.png
 ├── med_ethics_bench/
 │   ├── config.py                    # config and defaults / 配置
 │   ├── pipeline.py                  # main orchestration / 主流程
@@ -173,3 +183,11 @@ python main.py grade --model GPT-5.4
 2. 加入分法域统计，避免“全球泛化”过度结论。
 3. 提供错误类型分析（引文错误、法域锚点缺失、利益相关者遗漏、反方论证不足）。
 4. 抽样 30–50 题人工复核，验证 rubric 严格性与陷阱有效性。
+
+---
+
+## 7) Reproducibility / 可复现性
+
+- Keep all generated JSONL artifacts under `data/` and version-control metadata files.
+- Pin model names and runtime flags in experiment logs.
+- For publications, store both raw model responses and normalized scoring outputs.
