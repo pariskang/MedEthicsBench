@@ -1,4 +1,4 @@
-# MedEthicsBench / 医学伦理基准
+# MedEthicsBench / 医学伦理基准 
 
 > A frontier-hard, dynamic research-grade benchmark toolkit for **medical ethics reasoning**, designed for paper-level evaluation and reproducible experiments.
 >
