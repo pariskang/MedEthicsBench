@@ -11,12 +11,10 @@
 **EN**
 - MedEthicsBench focuses on hard medical-ethics reasoning tasks, with legal-jurisdiction anchoring, cultural context constraints, and strict rubric-based grading.
 - The toolkit covers the full pipeline: retrieval corpus construction → question generation → model answering → automatic grading/reporting.
-- This repository has been re-organized as a complete research-style Git project based on the provided archive.
 
 **中文**
 - MedEthicsBench 面向高难度医学伦理推理评测，强调法域锚点、跨文化情境与可判分 rubric。
 - 工具链覆盖完整流程：语料检索与组织 → 题目生成 → 模型作答 → 自动评分与报告。
-- 本仓库已基于你提供的压缩包重构为完整研究型 Git 项目结构。
 
 ---
 
