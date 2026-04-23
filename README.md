@@ -203,10 +203,3 @@ python main.py grade --model GPT-5.4
 4. 抽样 30–50 题人工复核，验证 rubric 严格性与陷阱有效性。
 
 ---
-
-## 7) Reproducibility / 可复现性
-
-- Keep all generated JSONL artifacts under `data/` and version-control metadata files.
-- Pin model names and runtime flags in experiment logs.
-- For publications, store both raw model responses and normalized scoring outputs.
-
