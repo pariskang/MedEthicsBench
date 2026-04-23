@@ -1,8 +1,8 @@
 # MedEthicsBench / 医学伦理基准
 
-> A frontier-hard, research-grade benchmark toolkit for **medical ethics reasoning**, designed for paper-level evaluation and reproducible experiments.
+> A frontier-hard, dynamic research-grade benchmark toolkit for **medical ethics reasoning**, designed for paper-level evaluation and reproducible experiments.
 >
-> 面向复杂跨法律伦理体系的医学伦理推理 benchmark 工具链，支持题库构建、模型作答与自动评分。
+> 面向医学伦理推理的动态 benchmark 工具链，支持题库构建、模型作答与自动评分。
 
 ---
 
@@ -24,97 +24,22 @@
 
 ### 2.1 Track × Topic distribution / 赛道与主题分布
 
-| Topic | Comparison | Single-country | Universal |
-|---|---:|---:|---:|
-| Informed consent | 5 | 18 | 4 |
-| End of life | 5 | 18 | 4 |
-| Clinical research | 5 | 18 | 4 |
-| Genetic editing | 5 | 18 | 4 |
-| Organ transplant | 5 | 18 | 4 |
-| Privacy & data | 5 | 18 | 4 |
-| AI in clinical care | 5 | 18 | 4 |
-| Resource allocation | 5 | 18 | 0 |
-| Digital mental health AI | 5 | 18 | 0 |
-| Mental health | 5 | 18 | 0 |
+[View Figure 3 PDF / 查看图3 PDF](fig/Fig3_topic_by_track_heatmap.pdf)
 
 ### 2.2 Evidence composition / 证据来源构成
 
-| Bucket | Case | Guideline | Theory | Total |
-|---|---:|---:|---:|---:|
-| Raw retrieval corpus | 544 | 294 | 92 | 930 |
-| Benchmark-linked unique sources | 180 | 159 | 21 | 360 |
-| Weighted question references | 840 | 738 | 567 | 2145 |
+[View Figure 10 PDF / 查看图10 PDF](fig/Fig10_source_corpus_overview.pdf)
 
 ### 2.3 Annotation profile / 标注结构
 
-| Task type | Key points | Expected principles | Expected stakeholders | Common pitfalls |
-|---|---:|---:|---:|---:|
-| Case analysis | 6.5 | 5.4 | 8.0 | 4.3 |
-| Principle conflict | 6.2 | 4.2 | 6.6 | 4.2 |
-| Stakeholder map | 6.7 | 5.8 | 11.1 | 4.5 |
-| Cross-cultural | 6.3 | 6.2 | 7.2 | 5.4 |
-| Ethical dilemma | 6.6 | 4.6 | 5.7 | 4.6 |
-| Counter-factual | 6.0 | 4.1 | 5.1 | 4.3 |
-| CoT evaluation | 6.6 | 4.7 | 5.7 | 5.0 |
-| Open argument | 6.6 | 4.7 | 6.1 | 4.9 |
+[View Figure 4 PDF / 查看图4 PDF](fig/Fig4_annotation_density_by_format.pdf)
 
-### 2.4 Baseline performance tables / 基线性能表
 
-**Table IV. Overall and track-level performance**
+### 2.4 Prompt token distribution / 提示词长度分布
 
-| Model | Overall | Pass rate | Single-country | Comparison | Universal |
-|---|---:|---:|---:|---:|---:|
-| Claude Sonnet 4.6 | 0.3637 | 0.0000 | 0.3692 | 0.3444 | 0.3655 |
-| Gemini 3.1 Pro | 0.1660 | 0.0000 | 0.1568 | 0.1580 | 0.2386 |
-| GPT-5.4 | 0.5963 | 0.0506 | 0.6025 | 0.5544 | 0.6318 |
+[View Figure 5 PDF / 查看图5 PDF](fig/Fig5_prompt_token_distribution.pdf)
 
-**Table V. Mean score by jurisdiction**
-
-| Model | CN | US | UK | FR | RU | DE |
-|---|---:|---:|---:|---:|---:|---:|
-| Claude Sonnet 4.6 | 0.3224 | 0.3670 | 0.3613 | 0.3671 | 0.3954 | 0.3476 |
-| Gemini 3.1 Pro | 0.1780 | 0.1704 | 0.1566 | 0.1356 | 0.1459 | 0.1457 |
-| GPT-5.4 | 0.5589 | 0.5705 | 0.5803 | 0.6131 | 0.6223 | 0.5824 |
-
----
-
-# MedEthicsBench / 医学伦理基准
-
-> A frontier-hard, research-grade benchmark toolkit for **medical ethics reasoning**, designed for paper-level evaluation and reproducible experiments.
->
-> 面向医学伦理推理 benchmark 工具链，支持题库构建、模型作答与自动评分。
-
----
-
-## 1) Project Positioning / 项目定位
-
-**EN**
-- MedEthicsBench focuses on hard medical-ethics reasoning tasks, with legal-jurisdiction anchoring, cultural context constraints, and strict rubric-based grading.
-- The toolkit covers the full pipeline: retrieval corpus construction → question generation → model answering → automatic grading/reporting.
-- This repository has been re-organized as a complete research-style Git project based on the provided archive.
-
-**中文**
-- MedEthicsBench 面向高难度医学伦理推理评测，强调法域锚点、跨文化情境与可判分 rubric。
-- 工具链覆盖完整流程：语料检索与组织 → 题目生成 → 模型作答 → 自动评分与报告。
-- 本仓库已基于你提供的压缩包重构为完整研究型 Git 项目结构。
-
----
-
-## 2) Benchmark Snapshot / 基准概览
-
-### 2.1 Track × Topic distribution / 赛道与主题分布
-
-![Track × Topic distribution](fig/track_topic_distribution.png)
-
-### 2.2 Evidence composition / 证据来源构成
-
-![Evidence composition](fig/evidence_composition.png)
-
-### 2.3 Annotation profile / 标注结构
-
-![Annotation profile](fig/annotation_profile.png)
-
-### 2.4 Baseline performance tables / 基线性能表
+### 2.5 Baseline performance tables / 基线性能表
 
 **Table IV. Overall and track-level performance**
 
@@ -148,19 +73,6 @@ If you use **MedEthicsBench**, please cite:
 }
 ```
 
-**Authors**
-- Yanlan Kang
-- Lee shou-yu
-- Liying Chu
-- Sunsi Wu
-- Wenqing Qu
-- Weichen Liu
-- Longlong Cao*
-- Chengbin Hou*
-- William Cheng-Chung Chu*
-
----
-
 ## 3) Repository Structure / 仓库结构
 
 ```text
@@ -168,11 +80,10 @@ If you use **MedEthicsBench**, please cite:
 ├── main.py                          # CLI entry / 命令行入口
 ├── requirements.txt
 ├── fig/
-│   ├── track_topic_distribution.png
-│   ├── evidence_composition.png
-│   ├── annotation_profile.png
-│   ├── table_iv_overall_track_level_performance.png
-│   └── table_v_mean_score_by_jurisdiction.png
+│   ├── Fig3_topic_by_track_heatmap.pdf
+│   ├── Fig4_annotation_density_by_format.pdf
+│   ├── Fig5_prompt_token_distribution.pdf
+│   └── Fig10_source_corpus_overview.pdf
 ├── med_ethics_bench/
 │   ├── config.py                    # config and defaults / 配置
 │   ├── pipeline.py                  # main orchestration / 主流程
@@ -262,11 +173,3 @@ python main.py grade --model GPT-5.4
 2. 加入分法域统计，避免“全球泛化”过度结论。
 3. 提供错误类型分析（引文错误、法域锚点缺失、利益相关者遗漏、反方论证不足）。
 4. 抽样 30–50 题人工复核，验证 rubric 严格性与陷阱有效性。
-
----
-
-## 7) Reproducibility / 可复现性
-
-- Keep all generated JSONL artifacts under `data/` and version-control metadata files.
-- Pin model names and runtime flags in experiment logs.
-- For publications, store both raw model responses and normalized scoring outputs.
