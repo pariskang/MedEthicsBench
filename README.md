@@ -2,7 +2,7 @@
 
 > A frontier-hard, research-grade benchmark toolkit for **medical ethics reasoning**, designed for paper-level evaluation and reproducible experiments.
 >
-> 面向医学伦理推理 benchmark 工具链，支持题库构建、模型作答与自动评分。
+> 面向复杂跨法律伦理体系的医学伦理推理 benchmark 工具链，支持题库构建、模型作答与自动评分。
 
 ---
 
