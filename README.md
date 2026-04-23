@@ -78,12 +78,101 @@
 
 ---
 
+# MedEthicsBench / 医学伦理基准
+
+> A frontier-hard, research-grade benchmark toolkit for **medical ethics reasoning**, designed for paper-level evaluation and reproducible experiments.
+>
+> 面向医学伦理推理 benchmark 工具链，支持题库构建、模型作答与自动评分。
+
+---
+
+## 1) Project Positioning / 项目定位
+
+**EN**
+- MedEthicsBench focuses on hard medical-ethics reasoning tasks, with legal-jurisdiction anchoring, cultural context constraints, and strict rubric-based grading.
+- The toolkit covers the full pipeline: retrieval corpus construction → question generation → model answering → automatic grading/reporting.
+- This repository has been re-organized as a complete research-style Git project based on the provided archive.
+
+**中文**
+- MedEthicsBench 面向高难度医学伦理推理评测，强调法域锚点、跨文化情境与可判分 rubric。
+- 工具链覆盖完整流程：语料检索与组织 → 题目生成 → 模型作答 → 自动评分与报告。
+- 本仓库已基于你提供的压缩包重构为完整研究型 Git 项目结构。
+
+---
+
+## 2) Benchmark Snapshot / 基准概览
+
+### 2.1 Track × Topic distribution / 赛道与主题分布
+
+![Track × Topic distribution](fig/track_topic_distribution.png)
+
+### 2.2 Evidence composition / 证据来源构成
+
+![Evidence composition](fig/evidence_composition.png)
+
+### 2.3 Annotation profile / 标注结构
+
+![Annotation profile](fig/annotation_profile.png)
+
+### 2.4 Baseline performance tables / 基线性能表
+
+**Table IV. Overall and track-level performance**
+
+| Model | Overall | Pass rate | Single-country | Comparison | Universal |
+|---|---:|---:|---:|---:|---:|
+| Claude Sonnet 4.6 | 0.3637 | 0.0000 | 0.3692 | 0.3444 | 0.3655 |
+| Gemini 3.1 Pro | 0.1660 | 0.0000 | 0.1568 | 0.1580 | 0.2386 |
+| GPT-5.4 | 0.5963 | 0.0506 | 0.6025 | 0.5544 | 0.6318 |
+
+**Table V. Mean score by jurisdiction**
+
+| Model | CN | US | UK | FR | RU | DE |
+|---|---:|---:|---:|---:|---:|---:|
+| Claude Sonnet 4.6 | 0.3224 | 0.3670 | 0.3613 | 0.3671 | 0.3954 | 0.3476 |
+| Gemini 3.1 Pro | 0.1780 | 0.1704 | 0.1566 | 0.1356 | 0.1459 | 0.1457 |
+| GPT-5.4 | 0.5589 | 0.5705 | 0.5803 | 0.6131 | 0.6223 | 0.5824 |
+
+---
+
+---
+
+## Citation / 引用信息
+
+If you use **MedEthicsBench**, please cite:
+
+```bibtex
+@misc{kang2026medethicsbench,
+  title={MedEthicsBench: Evaluating Medical Ethics Reasoning Across Jurisdictions},
+  author={Yanlan Kang and Lee shou-yu and Liying Chu and Sunsi Wu and Wenqing Qu and Weichen Liu and Longlong Cao and Chengbin Hou and William Cheng-Chung Chu},
+  year={2026}
+}
+```
+
+**Authors**
+- Yanlan Kang
+- Lee shou-yu
+- Liying Chu
+- Sunsi Wu
+- Wenqing Qu
+- Weichen Liu
+- Longlong Cao*
+- Chengbin Hou*
+- William Cheng-Chung Chu*
+
+---
+
 ## 3) Repository Structure / 仓库结构
 
 ```text
 .
 ├── main.py                          # CLI entry / 命令行入口
 ├── requirements.txt
+├── fig/
+│   ├── track_topic_distribution.png
+│   ├── evidence_composition.png
+│   ├── annotation_profile.png
+│   ├── table_iv_overall_track_level_performance.png
+│   └── table_v_mean_score_by_jurisdiction.png
 ├── med_ethics_bench/
 │   ├── config.py                    # config and defaults / 配置
 │   ├── pipeline.py                  # main orchestration / 主流程
@@ -181,5 +270,3 @@ python main.py grade --model GPT-5.4
 - Keep all generated JSONL artifacts under `data/` and version-control metadata files.
 - Pin model names and runtime flags in experiment logs.
 - For publications, store both raw model responses and normalized scoring outputs.
-
-
